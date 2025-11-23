@@ -15,7 +15,7 @@ native-image \
   --gc=G1 \
   -H:+ReportExceptionStackTraces \
   -H:Name=script \
-  -cp "$(clj -Spath -M:test)" \
+  -cp "$(clj -Spath -M)" \
   script
 
 echo "Native executable built: ./script"
