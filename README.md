@@ -16,7 +16,7 @@ This project uses Clojure 1.11.3 and clojure.tools.cli 1.0.219 for argument pars
 
 Run the program directly:
 ```bash
-$ clojure -m script --help
+$ clj -M -m script --help
 Usage: script [options]
 
 Options:
@@ -28,7 +28,7 @@ Examples:
 
 Run tests:
 ```bash
-$ clojure -M:test -e "(require 'script-test) (clojure.test/run-tests 'script-test)"
+$ clj -M:test -e "(require 'script-test) (clojure.test/run-tests 'script-test)"
 ```
 
 ## Building
