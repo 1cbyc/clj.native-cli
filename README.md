@@ -2,7 +2,7 @@
 
 This is a native CLI tool built with Clojure and GraalVM.
 
-This project uses Clojure 1.11.3, clojure.tools.cli 1.0.219 for argument parsing, and clj.native-image for GraalVM native-image integration.
+This project uses Clojure 1.11.3 and clojure.tools.cli 1.0.219 for argument parsing. Native executables are built directly with GraalVM's native-image tool.
 
 ## Features
 
@@ -35,11 +35,13 @@ $ clojure -M:test -e "(require 'script-test) (clojure.test/run-tests 'script-tes
 
 Compile a native executable:
 ```bash
-$ clojure -A:native-image
+$ ./build-native.sh
 $ ./script --help
 ```
 
 The native executable can be distributed without requiring Clojure or the JVM to be installed. The build uses G1 garbage collector and optimized settings for better performance.
+
+The build script uses GraalVM's native-image tool directly, with no external dependencies.
 
 ## Project Structure
 
@@ -49,6 +51,7 @@ clj.native-cli/
 │   └── script.clj      # Main CLI application
 ├── test/
 │   └── script_test.clj  # Test suite
+├── build-native.sh      # Native build script
 ├── deps.edn             # Dependencies and build configuration
 └── README.md            # This file
 ```
