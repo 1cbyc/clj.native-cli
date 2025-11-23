@@ -14,4 +14,4 @@
               :sha "b3823a48be75122b9671c86ce5353a85589ef15f"}}
            :test
            {:extra-paths ["test"]
-            :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}}}}}
+            :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}}}}}}
